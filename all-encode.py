@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime as dt
+import category_encoders as ce
 
 # read csv data
 #  parse_dates = ["booking_check_in", "booking_check_out"], dayfirst=True
@@ -33,11 +34,11 @@ area = area.fit_transform(df)
 area = area[['area_name','area_squad','area_airport_name']]
 
 # concatinate all df
-cproperty = pd.concat([pId,pType,pStatus,pPack,pDesign,pProx,pLifeSupport,pService,pArea,pEmployee],axis='columns')
+cproperty = pd.concat([pId,pType,pStatus,pPack,pDesign,pProx,pLifeSupport,pService,pArea],axis='columns')
 listing = pd.concat([lId,lStatus,uId,profileId,employee],axis='columns')
 
 
-dummies = pd.concat([cproperty,listing,booking],axis='columns')
+dummies = pd.concat([cproperty,listing,],axis='columns')
 # print(dummies)
 
 # dump to csv
