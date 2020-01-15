@@ -1,1 +1,1 @@
-'area_name', 'area_squad'
+*

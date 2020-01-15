@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 df = pd.read_csv("df/listing.csv")
-# create columns for  "listing_type" dummy variables
+# create columns for  dummy variables
 lId = pd.get_dummies(df.listing_id,prefix = "id")
 lStatus = pd.get_dummies(df.listing_status, prefix='status')
 
