@@ -30,7 +30,7 @@ pArea = pd.get_dummies(df.area_id,prefix='area')
 #                     5.0 :  'bedroom_6'}, 
 #                  inplace=True)
 
-employee = pd.get_dummies(df.employee_id, prefix='employee')
+pEmployee = pd.get_dummies(df.employee_id, prefix='employee')
 
 # object for all encoded df
 dummies = pd.concat([pId,pType,pStatus,pPack,pDesign,pProx,pLifeSupport,pService,pArea,pEmployee],axis='columns')
